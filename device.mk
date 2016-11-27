@@ -138,10 +138,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprint.kl \
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # KEYPAD
 PRODUCT_PACKAGES += \
     usbaudio.kl
@@ -179,7 +175,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 
 # HWC
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     hwcomposer.hi3650
 
 # Power HAL
