@@ -1,0 +1,10 @@
+--- wrong_gralloc_priv.h	2016-11-29 23:20:49.141178000 +0100
++++ gralloc_priv.h	2016-11-29 23:22:22.273178000 +0100
+@@ -24,6 +24,7 @@
+ #include <pthread.h>
+ #include <errno.h>
+ #include <unistd.h>
++#include <utils/Log.h>
+ 
+ #include <cutils/native_handle.h>
+ 
