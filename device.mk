@@ -174,10 +174,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=0 \
     persist.sys.root_access=1
 
-# HWC
-PRODUCT_PACKAGES += \
-    hwcomposer.hi3650
-
 # Power HAL
 PRODUCT_PACKAGES += \
     power.hi3650
@@ -187,25 +183,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril.config=simactivation
 
 # NFC
-#PRODUCT_PACKAGES += \
-#    libnfc-nci \
-#    libnfc_nci_jni \
-#    com.android.nfc_extras \
-#    nfc_nci.pn54x.default \
-#    NfcNci \
-#    Tag
+PRODUCT_PACKAGES += \
+   com.android.nfc_extras \
+   com.nxp.nfc.nq \
+   NQNfcNci \
+   nqnfcee_access.xml \
+   nqnfcse_access.xml \
+   nfc_nci.nqx.default \
+   Tag
 
 #PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/prebuilts/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-#    $(LOCAL_PATH)/prebuilts/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-#    $(LOCAL_PATH)/prebuilts/nfcee_access.xml:system/etc/nfcee_access.xml
+    $(LOCAL_PATH)/prebuilts/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/prebuilts/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 #PRODUCT_COPY_FILES += \
-#    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-#    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-#    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-#    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
-#    packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
+    packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
 
 # Enhanced NFC
 #$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
